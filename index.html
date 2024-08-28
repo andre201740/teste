@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+    </script>
+</head>
+<body>
+    <h1>teste</h1>
+
+    <button id="botaoAdicionar">adiciona teu nome e tua idade seu miseravel</button>
+
+    <ul id="listaNomes"></ul>
+
+    <script>
+        const btn = document.getElementById("botaoAdicionar");
+        let listaNomes = document.getElementById("listaNomes");
+
+        btn.addEventListener("click", function() {
+            let nome = prompt("digite o teu nome: ");
+            let idade = prompt("digite tua idade (não é scam confia): ");
+
+            let novoItem = document.createElement("Li");
+
+            novoItem.textContent = "nome: " + nome + ", idade: " + idade;
+
+            listaNomes.appendChild(novoItem);
+        });
+    </script>
+</body>
+</html>
